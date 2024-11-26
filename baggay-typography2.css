@@ -1,0 +1,56 @@
+/* General reset */
+body {
+    margin: 0;
+    background-color: #5ce1e6; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Arial font */
+}
+
+/* Grid container */
+.container {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+    grid-template-rows: repeat(12, 1fr); /* 12 equal rows */
+    width: 1400px; /* Fixed width */
+    height: 1400px; /* Fixed height */
+
+    /* To visualize the grid */
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent calc(100% / 12)
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent calc(100% / 12)
+    );
+}
+
+/* Text styling */
+.text {
+    grid-column: 1 / 13; /* Span all 12 columns */
+    grid-row: 6 / 8; /* Center text within rows 6-7 */
+    font-size: 118px; /* Font size */
+    text-align: center; /* Align text to the center */
+    color: #000000; /* Default text color */
+    line-height: 1.4; /* Minimal gaps */
+}
+
+/* Highlight and bold "child" */
+.highlight-bold {
+    color: #ff5757; /* Red for "child" */
+    font-weight: bold; /* Bold text */
+}
+
+/* Style for "good childhood." */
+.bold {
+    font-weight: bold; /* Bold text */
+}
